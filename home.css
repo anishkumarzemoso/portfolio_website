@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 35px;
+    margin: auto;
+}
+
+
+/* navbar styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0px;
+    /* background: crimson; */
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 20px 0;
+    background: black;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: red;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: red;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: red;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* home section styling */
+.home {
+    display: flex;
+    background: url("https://wallpaperaccess.com/full/5652006.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 30px;
+}
+
+.home .home-content .text-2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.home .home-content .text-3 span {
+    color: red;
+    font-weight: 500;
+}
+
+.home .home-content .text-4 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.home .home-content .text-4 span{
+    color: aqua;
+    font-weight: 500;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background:red;
+    color: black;
+    font-size: 30px;
+    padding: 20px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color:#fff;
+    background: none;
+}
+
+/* footer section styling */
+footer{
+    font-size: 20px;
+    text-align: center;
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a{
+    color: red;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+/* media query */
+@media(max-width:991px) {
+    max-width {
+        padding: 0 50px;
+    }
+}
+
+    @media(max-width: 947px){
+        /* .menu-btn {
+            display: block;
+            z-index: 999;
+        }
+
+        .menu-btn i.active:before {
+            content: "\f00d";
+        }
+
+        .navbar .menu {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            background: #111;
+            text-align: center;
+            padding-top: 80px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .menu.active {
+            left: 0;
+        }
+
+        .navbar .menu li {
+            display: block;
+        }
+
+        .navbar .menu li a {
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 25px;
+        } */
+
+        .home .home-content .text-2 {
+            font-size: 70px;
+        }
+
+        .home .home-content .text-3 {
+            font-size: 40px;
+        }
+    }
+
+    .home .home-content a{
+        font-size: 25px;
+        padding: 10px 30px;
+    }
+
+    @media(max-width:690px) {
+        max-width {
+            padding: 0 25px;
+        }
+        .home .home-content .text-2 {
+            font-size: 60px;
+        }
+
+        .home .home-content .text-3 {
+            font-size: 32px;
+        }
+        .home .home-content a{
+            font-size: 20px;
+            padding: 10px 24px;
+        }
+    }
+
+    @media(max-width:500px) {
+        .home .home-content .text-2 {
+            font-size: 50px;
+        }
+
+        .home .home-content .text-3 {
+            font-size: 30px;
+        }
+    }

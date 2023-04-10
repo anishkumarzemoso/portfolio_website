@@ -213,7 +213,7 @@ portfolio section styling for my work
 
 
 
- @media(max-width:600px) {
+@media(max-width:600px) {
     .text{
         position: absolute;
         top: 80%;
@@ -234,4 +234,27 @@ portfolio section styling for my work
       text-align: center;
     }
   }
+
+@media(max-width: 878px) {
+    .right{
+        text-align: justify;
+        position: absolute;
+        top: 90%;
+        left: -23%;
+    }
+
+    .about .title::after{
+        content: "";
+    }
+
+    .about .title{
+        position: absolute;
+        top: 18%;
+        width: 200px;
+    }
+
+    .about .about-content .right a {
+        margin-top: 400px;
+    }
+}
   
